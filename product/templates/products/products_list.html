@@ -1,0 +1,3 @@
+{%for sub in object%}
+<p> {{sub.id}} - <a href = '{{sub.get_absolute_url}}'>{{sub.title}}</a></p>
+{%endfor%}

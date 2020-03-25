@@ -1,0 +1,44 @@
+
+
+{%extends "base.html"%}
+<!--
+
+{percetnage tag%} are called tag : used in retrieving html code,running  code in template
+-->
+
+{% block content%}
+<h1>Hello World</h1>
+
+<!--
+{{request.user }} print out the user name 
+or 
+{{request.user.is_authenticated}}
+
+translation from python to html : {{doublecurl}} , in other word retrieve the variable and translate to html
+	Key becomes template variable that are inside of any given context we passed
+-->
+	<p>{{my_text}}</p>
+
+
+<!--
+	for loop through a list from context
+	the vertical line is for piping
+	add:22 is for template tag filter 
+		{*{ }} is specific to context , can be used with fiter
+
+	if context is a html code then do {*{ | safe}} for displaying the actual html or | strip to strig the tag
+	For more: look at template tag and filter
+
+-->
+	<p>
+		{% for my_sub in my_list%}
+			{{forloop.counter}} - {{my_sub | add:22}}
+		{%endfor%}
+	</p>
+
+	<p>
+		{% if True %}
+			</p> this is truth</p>
+		{%endif%}
+<p1>Template</p1>
+{%endblock%}

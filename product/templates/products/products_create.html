@@ -1,0 +1,38 @@
+
+
+<!--Pure Django form
+	form.as_p is applying a <p></p> around it .. etc as_li puts <li></li> tag
+-->
+
+<form method = "POST">{%csrf_token%}
+	{{form.as_p}}
+	<input type = "submit" value = "Save" />
+</form>
+
+<!-- 
+Raw Html Form: 
+	there is method GET/POST
+	If GET is used -> it will just change the URL to create/title = input
+	If Post is used -> forbidden as CSR verification failed
+		This is because action
+		action specify the URL of the document where the data to be sent after the submission of the form.
+		If action is specified in the form and method = Get
+			etc .. action = "/search/" method = "GET" -> URL becomes /search/user_input
+				action can be redirect to a website like "http://www.google.com/search" and let name = "q" -> google search
+
+	csrf adds in security to the POST request
+
+<form method = "POST">{%csrf_token%}
+	<input type = "text" name = "title" placeholder = "holder" />
+	<input type = "submit" value = "Save" />
+</form>
+ -->
+
+
+<!--
+<form method = "POST">{% csrf_token%}
+	 as_p is built in that takes the html form into paragraph text
+	{*{form.as_p}}
+<input type = "submit" value = "Save" />
+</form>
+-->

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+		<title>Testing</title>
+</head>
+<body>
+	replace 2 
+	<!-- 
+		block content: Content is a user defined tag where as block is django 
+		Can also use include to achieve the same thing as using block
+	-->
+	{% include "include.html"%}
+	{%block content%}
+	replace
+	{%endblock%}
+</body>
+</html>

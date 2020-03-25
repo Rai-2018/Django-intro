@@ -1,0 +1,5 @@
+<form method = "POST">{%csrf_token%}
+	<h1>Delete {{object.title}}</h1>
+	<!-- ../ is to go up one directory (Parent of current directory)-->
+	<p><input type="submit" value="Yes"/><a href="../">Cancel</a></p>
+<form>
