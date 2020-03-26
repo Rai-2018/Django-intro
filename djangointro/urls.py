@@ -29,5 +29,7 @@ urlpatterns = [
     path("create/",product_forms),
 	path('home/',home_view,name="home"),
     path('admin/', admin.site.urls),
-    path("product/",include("product.urls"))
+    path("product/",include("product.urls")),
+    #include has to be folder name
+    path("article/",include("blog.urls"))
 ]

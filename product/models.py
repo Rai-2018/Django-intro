@@ -23,7 +23,8 @@ class Product(models.Model):
 		
 		#dynamic reverse url routing
 		#in the url related to the name product_detail, pass in my_id
-		#reverse is now based off app_name
+		#reverse is now based off app_name: product
+		#returns a url
 		return reverse("product:product_detail",kwargs={"my_id":self.id})
 		#or
 		#return reverse("product_detail",kwargs={"my_id":self.id},name = "product")
